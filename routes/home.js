@@ -3,7 +3,8 @@ const router = Router();
 
 router.get('/', async (req, res) => {
     if (req.cookies.key == '2359235012foEIW412') {
-        res.send(`<html lang="en">
+        res.send(`
+        <html lang="en">
         <head>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -88,8 +89,6 @@ router.get('/', async (req, res) => {
         
         
             <script src="js/script.js"></script>
-            <script src="js/test.js"></script>
-            <script src="js/logout.js"></script>
         </body>
         </html>`);
     } else {

@@ -90,7 +90,6 @@ router.get('/', async (req, res) => {
         
         
             <script src="js/script.js"></script>
-            <script src="js/logout.js"></script>
         </body>
         </html>`);
     } else {
