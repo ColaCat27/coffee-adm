@@ -30,7 +30,7 @@ router.post('/getitems', (req, res) => {
 
 
 router.post('/upload', multer({storage: uploading}).single('photo'), (req, res) => {
-    let w = __dirname.replace('routes/', '');
+    let w = __dirname.replace('/routes', '');
     req.body.photo = w + '/uploads/' + req.file.filename;
     req.body.baseName = translit(req.body.name);
     Item.find({name: req.body.name}, (err, result) => {
