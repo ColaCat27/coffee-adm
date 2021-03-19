@@ -1,8 +1,8 @@
 {
-  "name": "admin",
+  "name": "cofee-adm",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "node index.js",
   "scripts": {
     "start": "node index.js"
   },
