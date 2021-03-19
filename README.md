@@ -1,1 +1,1 @@
-coffee-adm
+admin
