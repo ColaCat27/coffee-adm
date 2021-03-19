@@ -74,7 +74,6 @@ add.addEventListener('click', (e) => {
     createItem();
 });
 
-
 function createItem(data = [{
     name: 'Введите имя',
     price: 'Введите цену',
@@ -82,20 +81,20 @@ function createItem(data = [{
     photo: 'Задайте фото'
     }]) {
     data.forEach(item => {
-       const form = document.createElement('form');
-       const wrapper = document.querySelector('.shop__wrapper');
-
-        form.innerHTML = `
-        <button class="shop__delete">&times;</button>
-        <input type="text" name="name" placeholder="Название товара" value="${item.name}">
-        <input type="text" name="price" placeholder="Цена товара" value="${item.price}">
-        <input type="text" name="weight" placeholder="Вес товара" value="${item.weight}">
-        <input type="file" name="photo">
-        <button class="shop__button">Добавить в базу</button>`;
-        form.classList.add('shop__item')
+        const form = document.createElement('form');
+        const wrapper = document.querySelector('.shop__wrapper');
+ 
+         form.innerHTML = `
+         <button class="shop__delete">&times;</button>
+         <input type="text" name="name" placeholder="Название товара" value="${item.name}">
+         <input type="text" name="price" placeholder="Цена товара" value="${item.price}">
+         <input type="text" name="weight" placeholder="Вес товара" value="${item.weight}">
+         <input type="file" name="photo">
+         <button class="shop__button">Добавить в базу</button>`;
+         form.classList.add('shop__item')
         wrapper.append(form);
     });
-    sendData('/items/upload', '.shop__form');
+    sendData('/items/upload', '.shop__item');
     deleteItem();
     }
 
